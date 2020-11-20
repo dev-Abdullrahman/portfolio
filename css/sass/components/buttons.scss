@@ -1,0 +1,23 @@
+.btn{
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: all 0.3s ease-in-out;
+}
+.blue-btn{
+    background-color: #fff;
+    background-color: $mainColor;
+    color: $white;
+}
+.blue-btn:hover{
+    background-color: $white;
+}
+.white-btn{
+    background-color: #fff;
+    background-color: $white;
+}
+.white-btn:hover{
+    background-color: $mainColor;
+    color: $white;
+}

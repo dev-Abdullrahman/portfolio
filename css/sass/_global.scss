@@ -5,7 +5,18 @@ body {
     font-family: "Nunito", sans-serif;
     line-height: 1.6;
     background: #ffffff;
+    height: 5000px;
     overflow-x: hidden;
     font-size: 16px;
     color: #939393;
+}
+body::-webkit-scrollbar {
+    background-color: $white;
+    width: 10px;
+    right: -10px
+}
+body::-webkit-scrollbar-thumb{
+    background-color: $mainColor;
+    border-radius:8px;
+    right: -10px
 }

@@ -5,9 +5,50 @@ body {
   font-family: "Nunito", sans-serif;
   line-height: 1.6;
   background: #ffffff;
+  height: 5000px;
   overflow-x: hidden;
   font-size: 16px;
   color: #939393;
+}
+
+body::-webkit-scrollbar {
+  background-color: #fff;
+  width: 10px;
+  right: -10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2a8e82;
+  border-radius: 8px;
+  right: -10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+
+.blue-btn {
+  background-color: #fff;
+  background-color: #2a8e82;
+  color: #fff;
+}
+
+.blue-btn:hover {
+  background-color: #fff;
+}
+
+.white-btn {
+  background-color: #fff;
+  background-color: #fff;
+}
+
+.white-btn:hover {
+  background-color: #2a8e82;
+  color: #fff;
 }
 
 /*==================================================================
@@ -21,9 +62,71 @@ body {
 ============== Header =============================================
 =================================================================*/
 #header {
-  background-color: #fff;
+  background-image: url("../images/bg.png");
+  height: 100vh;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#header > :before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#header .header-info {
+  margin-top: 15rem;
+}
+#header .header-info h1 {
+  font-weight: 900;
+  line-height: 1;
+}
+#header .header-info .go-down {
+  position: absolute;
+  bottom: -120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#header .header-info .go-down span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin: 0px;
+  animation: animate 2s infinite;
+}
+#header .header-info .go-down span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+#header .header-info .go-down span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
 }
 
+/*========== Responsive ===========*/
+@media (max-width: 768px) {
+  #header h1 {
+    font-size: 30px;
+  }
+}
 /*==================================================================
 ============== About =============================================
 =================================================================*/
