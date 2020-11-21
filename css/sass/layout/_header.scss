@@ -17,10 +17,12 @@
         bottom: 0;
         right: 0;
         top: 0;
+        height: 100vh;
+        width: 100%;  
         background: rgba(0, 0, 0, 0.5);
     }
     .header-info{
-        margin-top:15rem;
+        margin-top:16rem;
         h1{
             font-weight: 900;
             line-height: 1;
@@ -50,7 +52,6 @@
             animation-delay: -0.4s;
         }
         @keyframes animate{
-            
             0%{
                 opacity: 0;
                 transform: rotate(45deg) translate(-20px, -20px);
