@@ -13,6 +13,11 @@
 .green-btn:hover{
     background-color: $white;
 }
+.green-btn.without-hover:hover{
+    background-color: #fff;
+    background-color: $mainColor;
+    color: $white;
+}
 .white-btn{
     background-color: #fff;
     background-color: $white;
