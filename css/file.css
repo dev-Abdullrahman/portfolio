@@ -30,6 +30,10 @@ p.heading {
   font-size: 45px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 @media (max-width: 576px) {
   .site-section {
     padding-top: 40px;
@@ -80,6 +84,47 @@ p.heading {
   }
 }
 /*==================================================================
+============== Icons =============================================
+=================================================================*/
+#absolute-icons .fa-arrow-alt-circle-up {
+  z-index: 999999999999999;
+  cursor: pointer;
+  color: #2a8e82;
+  font-size: 50px;
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#absolute-icons .contact-icons {
+  z-index: 999999999999999;
+  position: fixed;
+  bottom: 8%;
+  left: 2%;
+}
+#absolute-icons .contact-icons a {
+  display: block;
+  margin: 20px 0px;
+}
+#absolute-icons .contact-icons a img {
+  width: 40px;
+}
+
+/*====== Responsive ========*/
+@media (max-width: 576px) {
+  #absolute-icons .fa-arrow-alt-circle-up {
+    font-size: 30px;
+  }
+  #absolute-icons .contact-icons a img {
+    width: 30px;
+  }
+}
+/*==================================================================
 ============== NavBar =============================================
 =================================================================*/
 #navbar {
@@ -88,18 +133,18 @@ p.heading {
   background-color: transparent;
   position: fixed;
   z-index: 10;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   /*=== Logo ===*/
   /*=== nav-links ===*/
   /*=== Bar Icon ===*/
 }
 #navbar.navbar-sticky {
   height: 50px;
-  box-shadow: 0px 0px 15px 0px #0000004f;
+  box-shadow: 0px 0px 15px 0px #00000085;
   background-color: #fff;
 }
 #navbar.navbar-sticky a {
@@ -145,12 +190,10 @@ p.heading {
   position: relative;
 }
 #navbar .nav-links li a {
+  text-transform: capitalize;
   color: #fff;
   text-decoration: none;
   margin: 0 1vw;
-}
-#navbar .nav-links li a:hover {
-  color: #2a8e82;
 }
 #navbar .nav-links li a:before {
   content: "";
@@ -162,13 +205,16 @@ p.heading {
   width: 0%;
   margin-left: 10%;
   background-color: #2a8e82;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-#navbar .nav-links li a:before:hover {
+#navbar .nav-links li a:hover {
+  color: #2a8e82;
+}
+#navbar .nav-links li a:hover:before {
   width: 80%;
 }
 #navbar .bar {
@@ -181,21 +227,21 @@ p.heading {
   background: #fff;
   margin: 4px;
   border-radius: 7px;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 #navbar .bar.toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 #navbar .bar.toggle .line2 {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   width: 0;
 }
 #navbar .bar.toggle .line3 {
@@ -216,11 +262,11 @@ p.heading {
     top: 50%;
     transform: translate(-5%, -50%);
     z-index: 2;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
   #navbar .nav-links {
     position: fixed;
@@ -232,13 +278,13 @@ p.heading {
     flex-direction: column;
     -webkit-clip-path: circle(0px at 100% 0%);
     clip-path: circle(0px at 100% 0%);
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     pointer-events: none;
-    box-shadow: 0px 0px 15px 0px #0000004f;
+    box-shadow: 0px 0px 15px 0px #00000085;
     /*===== At Open ====*/
   }
   #navbar .nav-links li {
@@ -266,7 +312,7 @@ p.heading {
 /*==================================================================
 ============== Header =============================================
 =================================================================*/
-#header {
+#home {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -280,7 +326,7 @@ p.heading {
   background-size: cover;
   background-repeat: no-repeat;
 }
-#header > :before {
+#home > :before {
   content: "";
   position: absolute;
   left: 0;
@@ -291,20 +337,20 @@ p.heading {
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
-#header .header-info {
+#home .header-info {
   margin-top: 6rem;
 }
-#header .header-info h1 {
+#home .header-info h1 {
   font-weight: 900;
   line-height: 1;
 }
-#header .header-info .go-down {
+#home .header-info .go-down {
   position: absolute;
   bottom: -120%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#header .header-info .go-down span {
+#home .header-info .go-down span {
   display: block;
   width: 15px;
   height: 15px;
@@ -314,10 +360,10 @@ p.heading {
   margin: 0px;
   animation: animate 2s infinite;
 }
-#header .header-info .go-down span:nth-child(2) {
+#home .header-info .go-down span:nth-child(2) {
   animation-delay: -0.1s;
 }
-#header .header-info .go-down span:nth-child(3) {
+#home .header-info .go-down span:nth-child(3) {
   animation-delay: -0.2s;
 }
 @keyframes animate {
@@ -336,10 +382,10 @@ p.heading {
 
 /*========== Responsive ===========*/
 @media (max-width: 768px) {
-  #header {
+  #home {
     background-image: url("../images/bg-mob.png");
   }
-  #header h1 {
+  #home h1 {
     font-size: 25px;
   }
 }
@@ -348,7 +394,6 @@ p.heading {
 =================================================================*/
 #about {
   position: relative;
-  background-color: #fff;
 }
 #about .right-section::before {
   content: "";
@@ -383,9 +428,6 @@ p.heading {
 /*==================================================================
 ============== Skills =============================================
 =================================================================*/
-#skills .progress-bars {
-  padding: 40px 0px;
-}
 #skills .progress-bars > div:nth-of-type(2) {
   position: relative;
 }
@@ -552,7 +594,7 @@ p.heading {
 #footer .copyright {
   background-color: #000;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: -10px;
   padding: 15px 0px;
 }

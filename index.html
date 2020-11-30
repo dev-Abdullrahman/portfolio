@@ -22,8 +22,25 @@
 
 
     </head>
-    <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65" >
-        
+    <body onscroll="iconOpacity() , addStickyClass()">
+     
+      
+
+        <!-- Absolute Icons -->
+        <section id="absolute-icons">
+            <div class="arrow-icon">
+                <i class="fas fa-arrow-alt-circle-up" ></i>
+            </div>
+            <div class="contact-icons">
+                <a href="https://wa.link/16f8bp" target="_blank">
+                    <img src="images/icons/whatsapp.png" alt="whatsapp">
+                </a>
+                <a href="https://facebook.com/dev.ismael96" target="_blank">
+                    <img src="images/icons/facebook.png" alt="whatsapp">
+                </a>
+            </div>
+        </section>
+
 
         <!--- NavBar -->
         <nav id="navbar">
@@ -37,12 +54,12 @@
                     </a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Resume</a></li>
-                    <li><a href="#">Contact Me</a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">skills</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">resume</a></li>
+                    <li><a href="#">contact</a></li>
                 </ul>
                 <div class="bar">
                     <div class="line1"></div>
@@ -53,8 +70,9 @@
         </nav>
 
 
+
         <!----- Header ----->
-        <section id="header">
+        <section id="home">
             <div class="container">
                 <div class="row  justify-content-center text-center">
                     <div class="col-lg-8 header-info">
@@ -76,6 +94,7 @@
                 </div>
             </div>
         </section>
+
 
 
         <!--- About --->
@@ -102,6 +121,7 @@
                 </div>
             </div>
         </section>
+
 
 
         <!--- Skills --->
@@ -200,7 +220,7 @@
             </div>
         </section>
 
-
+        
 
         <!--- Services --->
         <section id="services" class="site-section">
@@ -252,16 +272,10 @@
 
 
 
-
-
-
-
-
-
-        <!--- Contact Us --->
+        <!--- Contact Me --->
         <section id="contact" class="site-section">
             <div class="container">
-                <p class="heading text-center"> Contact Us </p>
+                <p class="heading text-center"> Contact Me </p>
                 <div class="row">
 
                     <div class="col-lg-7">
@@ -295,12 +309,12 @@
                     </div> 
                 
                     <div class="col-lg-4 ml-auto">
-                        <h3 class="h5 mb-4"> Contact Info </h3>
+                        <h3 class="h5 mb-4 mt-4"> Contact Info </h3>
                         <address class="text-black d-flex">  <i class="fas fa-map-marker-alt"></i> <span>Alexandria Governorate - Egypt , Al Hanuvil</span></address>
                         <ul class="list-unstyled ul-links mb-4">
                             <li class="mb-3">
                                 <a href="tel://11234567890" >
-                                    <i class="fas fa-phone-volume"></i> <span> +201210811347 </span>
+                                    <i class="fas fa-phone-volume"></i> <span> +20 1210811347 </span>
                                 </a>
                             </li>
                             <li class="mb-3">
@@ -321,10 +335,6 @@
                 </div>
             </div>
         </section>
-
-
-
-
 
 
 
@@ -352,8 +362,13 @@
                                     </a> 
                                 </li>
                                 <li>
-                                    <a href="mailto:dev.ismael96@gmail.com"> 
+                                    <a href="mailto: dev.ismael96@gmail.com"> 
                                         <i class="fas fa-envelope-square"></i> 
+                                    </a> 
+                                </li>
+                                <li>
+                                    <a href="https://github.com/dev-ismael" target="_blank"> 
+                                        <i class="fab fa-github-square"></i>
                                     </a> 
                                 </li>
                             </ul>
@@ -376,11 +391,11 @@
 
                     <div class="col-md-4 offset-md-1">
                         <div class="widget">
-                            <h3>Contact</h3>
+                            <h3>Contact Info</h3>
                             <address> <i class="fas fa-map-marker-alt"></i> Alexandria Governorate - Egypt , Al Hanuvil </address>
                             <ul class="list-unstyled links mb-4">
                                 <li>
-                                    <i class="fas fa-phone-volume"></i> <a href="tel://+201210811347"> +201210811347 </a>
+                                    <i class="fas fa-phone-volume"></i> <a href="tel://+201210811347"> +20 1210811347 </a>
                                 </li>
                                 <li>
                                     <i class="fas fa-envelope"></i> <a href="mailto:dev.ismael96@gmail.com"> dev.ismael96@gmail.com </a> 

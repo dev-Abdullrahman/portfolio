@@ -24,6 +24,9 @@ body::-webkit-scrollbar-thumb{
 p.heading{
     font-size: 45px;
 }
+.hidden{
+    display: none !important
+}
 @media( max-width:576px){
     .site-section{
         padding-top: 40px 

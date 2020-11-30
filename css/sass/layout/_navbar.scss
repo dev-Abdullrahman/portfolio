@@ -7,10 +7,10 @@
     background-color: transparent;
     position: fixed;
     z-index: 10;
-    @include transition( 0.5s);
+    @include transition( 0.4s);
     &.navbar-sticky{
         height: 50px;
-        box-shadow: 0px 0px 15px 0px #0000004f;
+        box-shadow: 0px 0px 15px 0px #00000085;
         background-color: $white;
         a{
             color: $mainColor !important;
@@ -56,12 +56,10 @@
         li {
             position: relative;
             a{
+                text-transform: capitalize;
                 color: $white;
                 text-decoration: none;
-                margin: 0 1vw;    
-                &:hover{
-                    color: $mainColor;
-                }
+                margin: 0 1vw; 
                 &:before{
                     content: "";
                     display: block;
@@ -72,10 +70,13 @@
                     width: 0%;
                     margin-left:10%;
                     background-color: $mainColor;
-                    @include transition( 0.5s);
-                    &:hover{
-                        width: 80% ;
-                    }       
+                    @include transition( 0.3s);
+                }
+                &:hover{
+                    color: $mainColor;
+                    &:before{
+                        width: 80%;
+                    }
                 }
             }
         }
@@ -89,14 +90,14 @@
             background: #fff;
             margin: 4px;
             border-radius: 7px;
-            @include transition( 0.5s);
+            @include transition( 0.4s);
         }
         /*Animating bar Icon on Click*/
         &.toggle .line1{
             transform: rotate(-45deg) translate(-5px,6px);
         }
         &.toggle .line2{
-            @include transition( 0.5s);
+            @include transition( 0.4s);
             width:0;
         }
         &.toggle .line3{
@@ -117,7 +118,7 @@
             top: 50%;
             transform: translate(-5%, -50%);
             z-index: 2;
-            @include transition( 0.5s);
+            @include transition( 0.4s);
         }
         .nav-links{
             position: fixed;
@@ -129,9 +130,9 @@
             flex-direction: column;
             -webkit-clip-path: circle(0px at 100% 0%);
             clip-path: circle(0px at 100% 0%);
-            @include transition( 0.5s);
+            @include transition( 0.4s);
             pointer-events: none;
-            box-shadow: 0px 0px 15px 0px #0000004f;
+            box-shadow: 0px 0px 15px 0px #00000085;
             li{
                 opacity: 0;
             }

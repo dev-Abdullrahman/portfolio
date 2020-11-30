@@ -1,5 +1,5 @@
 /*==================================================================
-============== NavBar =============================================
+======================== NavBar -===================================
 =================================================================*/
 
 /*===================== Add sticky Class =================*/
@@ -7,17 +7,8 @@ var nav           = document.querySelector("#navbar");
 var iconContainer = nav.querySelector("span.icon");
 var greenIcon     = '<img src="images/icons/green-icon.png"  alt="icon">';
 var whiteIcon     = '<img src="images/icons/white-icon.png"  alt="icon">';
-/*=== Check If in Mideum Page ===*/
-if( window.scrollY >  50 ){
-    nav.classList.add("navbar-sticky");
-    iconContainer.innerHTML = greenIcon;
-}else{
-    nav.classList.remove("navbar-sticky");
-    iconContainer.innerHTML = whiteIcon;
-}
-/*==  OnScroll ==*/
-window.onscroll = function (e) {  
-    if( this.scrollY >  50 ){
+function addStickyClass (e){
+    if( window.scrollY >  35 ){
         nav.classList.add("navbar-sticky");
         iconContainer.innerHTML = greenIcon;
     }else{
@@ -25,8 +16,9 @@ window.onscroll = function (e) {
         iconContainer.innerHTML = whiteIcon;
     }
 }
-
-/*====== at click Nav Bar ======*/
+/*=== Check If in Mideum Page ===*/
+addStickyClass();
+/*====== at click mob btn  ======*/
 var bar      = nav.querySelector(".bar");
 var navLinks = nav.querySelector(".nav-links");
 var links    = nav.querySelectorAll(".nav-links li");
@@ -41,3 +33,31 @@ bar.addEventListener('click', ()=>{
     // Bar Lines Color
     nav.classList.toggle("mob-nav");
 });
+/*========== at click links go sections ===========*/
+var navAnchors = document.querySelectorAll(".nav-links li a");
+var navAnchors = document.querySelectorAll("#footer .widget .links li a");
+navAnchors.forEach( navAnchor  => {
+    navAnchor.onclick = function (e){
+        e.preventDefault();
+        var element = document.getElementById(navAnchor.innerHTML);
+        element.scrollIntoView({behavior: "smooth"});
+    }
+});
+/*==================================================================
+======================== Absolute Icons ============================
+==================================================================*/
+var arrowIcon = document.querySelector(".fa-arrow-alt-circle-up");
+/*======== function iconOpacity ==========*/
+function iconOpacity (e) {  
+    if( window.scrollY >  400 ){
+        arrowIcon.style.opacity = "1"
+    }else{
+        arrowIcon.style.opacity = "0"
+    }
+}
+/*======= Check If in Mideum Page =======*/
+iconOpacity();
+/*====== At Click Icon ======*/
+arrowIcon.onclick = function (e){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
